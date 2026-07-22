@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katalog LN</title>
+<style>
+  :root{
+    --bg: #22e6e6;
+    --navbar: #171923;
+    --pill-active: #e11d2e;
+    --pill: #2a2d3a;
+    --text-dark: #14161f;
+    --card-radius: 14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+    min-height: 100vh;
+  }
+
+  /* NAVBAR */
+  .navbar{
+    max-width: 650px;
+    margin: 24px auto 0;
+    background: var(--navbar);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .navbar .left{ display:flex; align-items:center; gap:8px; }
+  .navbar button{
+    border:none; cursor:pointer;
+    font-weight:600; font-size:14px;
+    padding:8px 16px; border-radius:999px;
+    background: var(--pill); color:#fff;
+  }
+  .navbar button.active{ background: var(--pill-active); color:#fff; }
+  .navbar .icons{ display:flex; align-items:center; gap:14px; color:#fff; }
+  .navbar .icons .cart{ position:relative; }
+  .navbar .icons .cart .badge{
+    position:absolute; top:-8px; right:-10px;
+    background:var(--pill-active); color:#fff;
+    font-size:10px; font-weight:700;
+    border-radius:50%; width:16px; height:16px;
+    display:flex; align-items:center; justify-content:center;
+  }
+
+  /* PROFILE */
+  .profile{
+    max-width: 650px;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+  .profile .avatar{
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 auto 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 40px;
+  }
+  .profile h1{ font-size: 28px; font-weight: 800; margin-bottom: 10px; }
+  .profile p{ font-size: 14px; line-height: 1.5; opacity: 0.85; }
+
+  /* FILTER BAR */
+  .filter-bar{
+    max-width: 650px;
+    margin: 32px auto 0;
+    display:flex; align-items:center; gap:10px;
+  }
+  .filter-bar .sort{
+    background: var(--navbar); color:#fff;
+    border:none; padding:10px 16px; border-radius:999px;
+    font-size:13px; font-weight:600; cursor:pointer;
+    display:flex; align-items:center; gap:6px;
+  }
+  .filter-bar .arrow-btn{
+    width:34px; height:34px; border-radius:50%;
+    background: var(--navbar); color:#fff; border:none;
+    cursor:pointer; flex-shrink:0;
+  }
+  .filter-bar .tabs{ display:flex; gap:10px; flex:1; overflow-x:auto; }
+  .filter-bar .tabs button{
+    white-space:nowrap;
+    border:none; cursor:pointer;
+    font-weight:600; font-size:13px;
+    padding:9px 18px; border-radius:999px;
+    background: var(--navbar); color:#fff;
+  }
+  .filter-bar .tabs button.active{ background: var(--pill-active); }
+  .filter-bar .spacer-arrow{ margin-left:auto; }
+
+  /* WHATSAPP CTA */
+  .wa-cta{
+    max-width: 650px;
+    margin: 20px auto 0;
+    display:block; width:100%;
+    background: var(--pill-active);
+    color:#fff; text-align:center;
+    font-weight:700; font-size:15px;
+    padding:16px; border-radius:16px;
+    border:none; cursor:pointer;
+  }
+
+  /* GRID */
+  .grid{
+    max-width: 650px;
+    margin: 24px auto 60px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .card{
+    position:relative;
+    border-radius: var(--card-radius);
+    overflow:hidden;
+    background: linear-gradient(160deg, #3a3f58, #1c1e29);
+    aspect-ratio: 3/4.3;
+    display:flex; align-items:flex-end;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  }
+  .card .fav{
+    position:absolute; top:10px; right:10px;
+    width:30px; height:30px; border-radius:50%;
+    background: rgba(0,0,0,0.45);
+    display:flex; align-items:center; justify-content:center;
+    color:#fff; font-size:15px; cursor:pointer;
+  }
+  .card .label{
+    width:100%;
+    padding: 14px 12px;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+    color:#fff; font-size:14px; font-weight:700; line-height:1.3;
+  }
+
+  @media (max-width: 500px){
+    .navbar, .profile, .filter-bar, .wa-cta, .grid{ margin-left:16px; margin-right:16px; }
+    .grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="left">
+      <button class="active">Home</button>
+      <button>PDF Premium</button>
+    </div>
+    <div class="icons">
+      <span>&#128269;</span>
+      <span class="cart">&#128722;<span class="badge">0</span></span>
+    </div>
+  </div>
+
+  <!-- PROFILE -->
+  <div class="profile">
+    <div class="avatar">📚</div>
+    <h1>Nama Toko</h1>
+    <p>Selamat datang di katalog kami<br>Mohon dukungannya terus</p>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <button class="sort">Terbaru ▾</button>
+    <button class="arrow-btn">‹</button>
+    <div class="tabs">
+      <button class="active">Semua</button>
+      <button>♥ Favorit (0)</button>
+    </div>
+    <button class="arrow-btn spacer-arrow">›</button>
+  </div>
+
+  <!-- WHATSAPP CTA -->
+  <button class="wa-cta">Hubungi Whatsapp Admin (Lebih Mudah dan Praktis)</button>
+
+  <!-- PRODUCT GRID -->
+  <div class="grid">
+    <div class="card">
+      <div class="fav">♡</div>
+      <div class="label">Judul Buku 1</div>
+    </div>
+    <div class="card">
+      <div class="fav">♡</div>
+      <div class="label">Judul Buku 2</div>
+    </div>
+    <div class="card">
+      <div class="fav">♡</div>
+      <div class="label">Judul Buku 3</div>
+    </div>
+    <div class="card">
+      <div class="fav">♡</div>
+      <div class="label">Judul Buku 4</div>
+    </div>
+  </div>
+
+</body>
+</html>
