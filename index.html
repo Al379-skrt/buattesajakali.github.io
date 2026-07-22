@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NelsNovel - Katalog Digital</title>
+    <style>
+        /* Pengaturan Dasar Halaman */
+        body {
+            background-color: #00F0FF; /* Warna latar belakang Cyan/Mint */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Gaya Foto Profil */
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            margin-top: 20px;
+        }
+
+        /* Gaya Teks Nama dan Bio */
+        h1 {
+            margin: 10px 0 5px 0;
+            font-size: 24px;
+            color: #333;
+        }
+        p {
+            margin: 0 0 30px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Gaya Tombol WhatsApp */
+        .wa-button {
+            background-color: #FF0000; /* Warna Merah */
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 30px;
+            box-shadow: 2px 4px 0px rgba(0,0,0,0.3); /* Efek bayangan tombol */
+            transition: transform 0.2s;
+        }
+        .wa-button:active {
+            transform: scale(0.95); /* Efek mengecil saat ditekan */
+        }
+
+        /* Pengaturan Grid untuk Katalog Produk */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Membuat 2 kolom sejajar */
+            gap: 15px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Gaya Kartu Produk (Sampul Buku) */
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bagian Profil -->
+    <img src="https://via.placeholder.com/100" alt="Profil Admin" class="profile-pic">
+    <h1>NelsNovel</h1>
+    <p>Selamat datang di katalog e-book NelsNovel.<br>Temukan berbagai novel menarik di bawah ini!</p>
+
+    <!-- Bagian Tombol WhatsApp -->
+    <!-- Ganti angka 6281234567890 dengan nomor WhatsApp asli Anda -->
+    <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20membeli%20e-book..." class="wa-button">
+        Hubungi WhatsApp Admin (Lebih Mudah)
+    </a>
+
+    <!-- Bagian Katalog Grid -->
+    <div class="grid-container">
+        
+        <!-- Produk 1 -->
+        <div class="product-card">
+            <!-- Ganti tautan src dengan tautan gambar sampul novel Anda nantinya -->
+            <img src="https://via.placeholder.com/200x300?text=Sampul+Buku+1" alt="Cover Buku 1">
+            <div class="product-info">Judul Novel Pertama</div>
+        </div>
+
+        <!-- Produk 2 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x300?text=Sampul+Buku+2" alt="Cover Buku 2">
+            <div class="product-info">Judul Novel Kedua</div>
+        </div>
+
+        <!-- Produk 3 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x300?text=Sampul+Buku+3" alt="Cover Buku 3">
+            <div class="product-info">Judul Novel Ketiga</div>
+        </div>
+
+        <!-- Produk 4 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x300?text=Sampul+Buku+4" alt="Cover Buku 4">
+            <div class="product-info">Judul Novel Keempat</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
